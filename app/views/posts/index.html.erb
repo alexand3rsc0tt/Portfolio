@@ -1,0 +1,17 @@
+<!-- <h1 class="Post_"> Posts </h1> -->
+<% @posts.each do |post| %>
+    <div class="post_content">
+      <h2 class="post_title"><%= post.title %></h2>
+      <h3 class="post_author"><%= post.author %></h2>
+      <p><%= truncate(post.body, length: 400) %></p>
+        <%= link_to 'Show', post_path(post.id) %>
+        <%= link_to 'Edit', edit_post_path(post.id) %>
+      <%= link_to 'delete', post, method: :delete %>
+    </div>
+<% end %>
+
+<p><%= link_to 'New Post', new_post_path %></p>
+
+<footer>
+ <p>&copy; 2014 Alex Burton.</p>
+</footer>

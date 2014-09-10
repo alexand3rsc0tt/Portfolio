@@ -1,0 +1,19 @@
+<h1> Edit Post </h1>
+<%= form_for @post do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+<br>
+<br>
+  <%= f.label :body %>
+  <%= f.text_area :body, :rows => 20 %>
+
+  <%= f.submit %>
+  <%= button_to 'Cancel', posts_path %>
+<% end %>
+
+<footer>
+ <p>&copy; 2014 Alex Burton.</p>
+</footer>
